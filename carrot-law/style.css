@@ -1,0 +1,505 @@
+/* リセットと基本スタイル */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", "Meiryo", sans-serif;
+    line-height: 1.8;
+    color: #333;
+    background-color: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* コンテナ */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ヘッダー */
+.header {
+    background-color: #d35400; /* Darker Orange */
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+}
+
+.nav ul {
+    display: flex;
+    gap: 25px;
+}
+
+.nav a {
+    font-size: 0.9rem;
+    transition: opacity 0.3s;
+}
+
+.nav a:hover {
+    opacity: 0.7;
+}
+
+/* メインビジュアル */
+.hero {
+    background: linear-gradient(135deg, #e67e22 0%, #d35400 100%); /* Orange Gradient */
+    color: #fff;
+    padding: 180px 20px 120px;
+    text-align: center;
+}
+
+.hero-sub {
+    font-size: 1rem;
+    letter-spacing: 0.3em;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.hero-desc {
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+    opacity: 0.95;
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: #fff;
+    color: #d35400; /* Darker Orange text */
+    padding: 18px 50px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 50px;
+    transition: all 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* セクション共通 */
+.section {
+    padding: 100px 0;
+}
+
+.section-gray {
+    background-color: #fff8f0; /* Very light orange/cream */
+}
+
+.section-title {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #d35400; /* Darker Orange */
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.section-title::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #e67e22; /* Orange */
+    margin: 20px auto 0;
+}
+
+.section-text {
+    text-align: center;
+    font-size: 1.05rem;
+    line-height: 2.2;
+    color: #555;
+}
+
+/* 業務内容 */
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.service-card {
+    background-color: #fff;
+    padding: 40px 25px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-icon {
+    width: 70px;
+    height: 70px;
+    background-color: #d35400; /* Darker Orange */
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: bold;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+
+.service-card h3 {
+    font-size: 1.1rem;
+    color: #d35400; /* Darker Orange */
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.8;
+}
+
+/* 私たちの強み */
+.feature-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.feature-item {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 50px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.feature-item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.feature-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #e67e22; /* Orange */
+    opacity: 0.3;
+    flex-shrink: 0;
+}
+
+.feature-content h3 {
+    font-size: 1.3rem;
+    color: #d35400; /* Darker Orange */
+    margin-bottom: 15px;
+}
+
+.feature-content p {
+    color: #555;
+    line-height: 2;
+}
+
+/* ご相談の流れ */
+.flow-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.flow-item {
+    background-color: #fff;
+    padding: 35px 25px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+    position: relative;
+}
+
+.flow-item::after {
+    content: "▶";
+    position: absolute;
+    right: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #e67e22; /* Orange */
+    font-size: 1rem;
+}
+
+.flow-item:last-child::after {
+    display: none;
+}
+
+.flow-step {
+    display: inline-block;
+    background-color: #d35400; /* Darker Orange */
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 5px 15px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.flow-item h3 {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.flow-item p {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.7;
+}
+
+/* 弁護士紹介 */
+.lawyer-profile {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.lawyer-photo {
+    width: 200px;
+    height: 250px;
+    background-color: #fcefe6; /* Light Orange */
+    border-radius: 8px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lawyer-photo::after {
+    content: "PHOTO";
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+.lawyer-position {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.lawyer-name {
+    font-size: 1.8rem;
+    color: #d35400; /* Darker Orange */
+    margin-bottom: 10px;
+}
+
+.lawyer-bar {
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 25px;
+}
+
+.lawyer-message {
+    color: #555;
+    line-height: 2;
+    padding: 20px;
+    background-color: #fff8f0; /* Very light orange/cream */
+    border-left: 4px solid #e67e22; /* Orange */
+}
+
+/* アクセス・お問い合わせ */
+.access-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.access-info h3 {
+    font-size: 1.3rem;
+    color: #d35400; /* Darker Orange */
+    margin-bottom: 25px;
+}
+
+.access-info dl {
+    line-height: 2;
+}
+
+.access-info dt {
+    font-weight: bold;
+    color: #333;
+    margin-top: 15px;
+}
+
+.access-info dt:first-child {
+    margin-top: 0;
+}
+
+.access-info dd {
+    color: #555;
+}
+
+.contact-box {
+    background-color: #d35400; /* Darker Orange */
+    color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.contact-box h3 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.contact-tel {
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.contact-hours {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    margin-bottom: 5px;
+}
+
+.contact-note {
+    font-size: 0.85rem;
+    opacity: 0.8;
+    margin-bottom: 25px;
+}
+
+.btn-secondary {
+    display: inline-block;
+    background-color: #fff;
+    color: #d35400; /* Darker Orange */
+    padding: 15px 40px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 50px;
+    transition: all 0.3s;
+}
+
+.btn-secondary:hover {
+    background-color: #f0f0f0;
+}
+
+/* フッター */
+.footer {
+    background-color: #222;
+    color: #999;
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 0.85rem;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 900px) {
+    .header-inner {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero-title {
+        font-size: 1.8rem;
+    }
+
+    .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .flow-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .flow-item::after {
+        display: none;
+    }
+
+    .lawyer-profile {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .lawyer-message {
+        text-align: left;
+    }
+
+    .access-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero {
+        padding: 140px 20px 80px;
+    }
+
+    .hero-title {
+        font-size: 1.5rem;
+    }
+
+    .section {
+        padding: 60px 0;
+    }
+
+    .section-title {
+        font-size: 1.4rem;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .flow-list {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-item {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .contact-tel {
+        font-size: 1.6rem;
+    }
+}

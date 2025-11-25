@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Mocks Gallery</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f5f5f5;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 40px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 24px;
+        }
+        .card {
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+        }
+        .card a {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        .card-preview {
+            height: 180px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+        }
+        .card-content {
+            padding: 20px;
+        }
+        .card-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #333;
+        }
+        .card-desc {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.5;
+        }
+        .card-tag {
+            display: inline-block;
+            margin-top: 12px;
+            padding: 4px 10px;
+            background: #e8f4e8;
+            color: #2d6a2d;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Web Mocks Gallery</h1>
+        <p class="subtitle">Collection of web app mockups and prototypes</p>
+
+        <div class="grid">
+            <div class="card">
+                <a href="broccoli-law/">
+                    <div class="card-preview" style="background: linear-gradient(135deg, #2d5a27 0%, #4a7c43 100%);">
+                        <span style="color: white; font-size: 24px;">&#x1F966;</span>
+                    </div>
+                    <div class="card-content">
+                        <h2 class="card-title">Broccoli Law Firm</h2>
+                        <p class="card-desc">Japanese law firm website specializing in estate inheritance. Features hero section, services, lawyer profiles, and contact forms.</p>
+                        <span class="card-tag">Japanese</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Add more cards here as you create new mocks -->
+
+        </div>
+    </div>
+</body>
+</html>
